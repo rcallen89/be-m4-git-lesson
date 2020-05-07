@@ -5,6 +5,10 @@ class Cart
     @contents = contents || {}
   end
 
+  def empty_method
+    return nil
+  end
+
   def add_item(id)
     contents[id.to_s] = (contents[id.to_s] || 0) + 1
   end
