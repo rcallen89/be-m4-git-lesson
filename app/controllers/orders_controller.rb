@@ -23,6 +23,7 @@ class OrdersController < ApplicationController
   end
 
   def update
+    require 'pry'; binding.pry
     @order = Order.find(params[:id])
     if @order.ordered? || @order.paid?
       status = params[:status]
